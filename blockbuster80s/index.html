@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <!--owl-->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+    <!--responsive-->
+    <link rel="stylesheet" href="style/responsive.css">
+    
+    
+
+    <title>Blockbuster anos 80</title>
+    
+</head>
+<body onLoad="onload();">
+    
+    <header>
+        <div class="container">
+            <h2 class="logo">Blockbuster 80'</h2>
+            <nav>
+                <a href="">Início</a>
+                <a href="">Filmes</a>
+                <a href="">Animações</a>
+                <a href="">Documentários</a>
+                
+            </nav>
+            
+        </div>
+    </header>
+
+    <main>
+        <div class="filme-principal">
+            <div class="container">
+                <h3 class="titulo">Os Trapalhões no Auto da Compadecida (1987)</h3>
+                <p class="descricao" ><h5>Sinopse</h5><br> 
+                    Pequena cidade de Taperoá João Grilo (Renato Aragão) e Chicó (Dedé Santana) 
+                    vivem armando confusões, afrontando um sacristão humilde (Mussum) e um padeiro (Zacarias). 
+                    Todos vivem sob os desmandos do bispo, do padre e do major. Até que, num ataque à cidade, 
+                    todos morrem pelas mãos do cangaceiro Severino e precisam enfrentar um julgamento no céu, 
+                    que coloca todos diante de Deus e da Virgem Maria.</p>
+            </div>
+            <div class="botoes">
+                
+                <button class="btn-home" id="fullscreen"><i class="fas fa-play"></i> ASSISTIR AGORA</button>
+                <BUtton class="btn-home open_button"><i class="fas fa-plus"></i> MAIS INFORMAÇÕES</BUtton>
+            </div>
+            
+        </div>
+    </main>
+    <div class="blank"><h2>Destaques</h5></div>
+
+    <div class="carrossel-filmes">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="img/01.jpg" class="box-filme" alt="Indiana Jones e o Templo da Perdição">
+            </div>
+            <div class="item">
+                <img src="img/02.jpg" class="box-filme" alt="Quero ser grande">
+            </div>
+            <div class="item">
+                <img src="img/03.jpg" class="box-filme" alt="De volta para o Futuro">
+            </div>
+            <div class="item">
+                <img src="img/04.jpg" class="box-filme" alt="E.T.">
+            </div>
+            <div class="item">
+                <img src="img/05.jpg" class="box-filme" alt="Karate Kid">
+            </div>
+            <div class="item">
+                <img src="img/06.jpg" class="box-filme" alt="Thundercats">
+            </div>
+            <div class="item">
+                <img src="img/07.jpg" class="box-filme" alt="Top Gun">
+            </div>
+            <div class="item">
+                <img src="img/08.jpg" class="box-filme" alt="Flashdance">
+            </div>
+            <div class="item">
+                <img src="img/09.jpg" class="box-filme" alt="Star Wars">
+            </div>
+            <div class="item">
+                <img src="img/10.jpg" class="box-filme" alt="Rock III">
+            </div>
+
+        </div>
+    </div>
+<!--MODAL-->
+    <div class="modal_info">
+        <h2>Os Trapalhões no Auto da Compadecida (1987)</h2><br>
+        <p>Sinopse
+            Na pequena cidade de Taperoá João Grilo (Renato Aragão) e Chicó (Dedé Santana) vivem armando confusões, afrontando um sacristão humilde (Mussum) e um padeiro (Zacarias). Todos vivem sob os desmandos do bispo, do padre e do major. Até que, num ataque à cidade, todos morrem pelas mãos do cangaceiro Severino e precisam enfrentar um julgamento no céu, que coloca todos diante de Deus e da Virgem Maria.
+            <br><br>
+            <strong>Diretor:</strong> Roberto Farias 
+            <br><strong>Escritor:</strong> Ariano Suassuna
+            
+            </p>
+      </div>
+      <div class="modal_overlay">
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--Fim Modal-->
+    
+    
+    <video id="element">
+        <source src="https://www.youtube.com/watch?v=Ex3a6pEHBjU"></source>
+    </video>
+    <script src="https://kit.fontawesome.com/173db2403f.js" crossorigin="anonymous"></script>
+    <!--owl-->
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/main.js"></script>
+    <script src="js/owl/modal.js"></script>
+    
+    <script>
+        var element = document.getElementById('element');
+        var fullscreen = document.getElementById('fullscreen');
+
+        fullscreen.addEventListener('click',function(){
+            //console.log ('ok');
+            if(element.requestFullscreen){
+                element.requestFullscreen();
+            } 
+            else if (element.webkitRequestFullscreen){
+                element.webkitRequestFullscreen();
+            }
+            else if (element.mozRequestFullScreen){
+                element.mozRequestFullScreen();
+            }
+            else if (element.msRequestFullscreen){
+                element.msRequestFullscreen();
+            }   
+        });
+    </script> 
+    
+</body>
+</html>

@@ -1,0 +1,289 @@
+:root{
+    --corlogo:rgb(255, 238, 1);
+    --preto:#141414; 
+    --azul: rgb(10, 38, 129);   
+}
+
+body{
+    background: var(--azul);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #FFF;
+    
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+   
+    
+}
+header .logo{
+    color: var(--corlogo);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 12px;
+    text-transform: uppercase;
+    border-style: double;
+    border-width: 2px;
+    border-color: var(--corlogo);
+    padding: 5px;
+    
+
+}
+header nav a{
+    color: #FFF;
+    text-decoration: none;
+    margin-right: 10px;
+    
+}
+ header nav a:hover{
+     color: var(--corlogo);
+ }
+
+ .filme-principal{
+    font-size: 16px;
+    background-image: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)), url('../img/osTrapalhoesNoAuto-bkp.jpg');
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: unset;
+    
+}
+
+.titulo{
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    
+    
+}
+
+.filme-principal .descricao{
+    margin-bottom: 50px;
+    margin-top: 10px;
+    text-align: justify;
+    
+}
+.botoes{
+    margin-top: 30px;
+    border: none;
+    padding: 15px;
+}
+.btn-home{
+    padding: 15px 10px;
+    background-color:rgba(0,0,0,.50);
+    color:var(--corlogo);
+    font-weight: bold;  
+    border: none;  
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.btn-home:hover{
+    background-color: rgb(255, 251, 0);
+    color: var(--azul);
+
+}
+
+.btn-home i{
+    margin-right: 7px;
+}
+
+.container{
+    padding: 15px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+  height: 100%;
+  width: 100%; 
+  display: block; 
+}
+ .blank{
+     height: 60%;
+     padding: 15px;
+ }
+
+
+ .modal {
+    opacity: 0;
+    padding: 50px;
+    position: absolute;
+    z-index: 1100;
+    -webkit-transition: opacity 600ms linear 600ms;
+    -moz-transition: opacity 600ms linear 600ms;
+    -ms-transition: opacity 600ms linear 600ms;
+    -o-transition: opacity 600ms linear 600ms;
+    transition: opacity 600ms linear 600ms;
+  }
+  
+  .modal_info {
+    background: #252525;
+    padding: 50px;
+    text-align: justify;
+  }
+  
+  .modal_overlay {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    overflow: auto;
+    /*position: fixed;*/
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 900;
+    -webkit-transition: opacity 200ms linear;
+    -moz-transition: opacity 200ms linear;
+    -ms-transition: opacity 200ms linear;
+    -o-transition: opacity 200ms linear;
+    transition: opacity 200ms linear;
+  }
+  
+  .display {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .conceal {
+    visibility: visible;
+  }
+  
+  .btn_container {
+    height: 100%;
+    text-align: center;
+  }
+  
+  .btn_container:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+  }
+  
+  .open_button {
+    
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    /*z-index: 1000;*/
+    -webkit-transition: opacity 100ms linear;
+    -moz-transition: opacity 100ms linear;
+    -ms-transition: opacity 100ms linear;
+    -o-transition: opacity 100ms linear;
+    transition: opacity 100ms linear;
+  }
+  
+  a.open_button {
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    line-height: 66px;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+   
+  a.open_button:hover {
+    background: #3E465A;
+  }
+  
+  a.open_button.load {
+    opacity: 0;
+  }
+  
+  button.modal_close {
+    background: #363D4E;
+    border: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    -webkit-transition: -webkit-transform 600ms;
+    -moz-transition: -moz-transform 600ms;
+    -ms-transition: -ms-transform 600ms;
+    -o-transition: -o-transform 600ms;
+    transition: transform 600ms;
+  }
+  
+  button.modal_close:hover {
+    background: #3E465A;
+    -webkit-transform: rotate(360deg) scale(1.10);
+    -moz-transform: rotate(360deg) scale(1.10);
+    -ms-transform: rotate(360deg) scale(1.10);
+    -o-transform: rotate(360deg) scale(1.10);
+    transform: rotate(360deg) scale(1.10);
+    -webkit-transition: -webkit-transform 600ms;
+    -moz-transition: -moz-transform 600ms;
+    -ms-transition: -ms-transform 600ms;
+    -o-transition: -o-transform 600ms;
+    transition: transform 600ms;
+  }
+  
+  button.modal_close span, span:before, span:after {
+    background: #FFFFFF;
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 20px;
+  }
+  
+  button.modal_close span:first-child {
+    background: none;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  button.modal_close span:before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  button.modal_close span:after {
+    -webkit-transform: translateY(-2px) rotate(-45deg);
+    -moz-transform: translateY(-2px) rotate(-45deg);
+    -ms-transform: translateY(-2px) rotate(-45deg);
+    -o-transform: translateY(-2px) rotate(-45deg);
+    transform: translateY(-2px) rotate(-45deg);
+    top: 2px;
+  }
